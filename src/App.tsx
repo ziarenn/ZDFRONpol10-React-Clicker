@@ -2,12 +2,18 @@ import { useState } from "react";
 import Display from "./components/Display/Display";
 import Manipulator from "./components/Manipulator/Manipulator";
 
-// useX - jakis hook
+// useX - jakis hook, wszystkie zaczynają się od "use"
+
+// 3 rzeczy które powodują refresh komponentu
+// a) zmiana stanu komponentu (useState)
+// b) zmiana stanu aplikacji (stan zarządzany przez redux)
+// c) zmiana wartości propsów
 
 function App() {
   // HOOKI TYLKO NA TOP SCOPE W KOMPONENTACH FUNKCYJNYCH
   const [count, setCount] = useState(0);
 
+  // JEŻELI ZMIENIA SIĘ STAN (AKTUALIZACJA WARTOŚCI ZMIENNEJ COUNT), KOMPONENT APP SIĘ ODŚWIEŻY, ZNACZY TO ŻE ZMIANA WARTOŚCI ZMIENNEJ STANOWEJ SPOWODUJE REFRESH KOMPONENTU W KTORYM TA ZMIENNA STANOWA ZOSTAŁA ZAINICJOWANA
   // const lista = [1, 2, 3, 4, 5];
   // const [a, b, c, d, e] = lista;
   // console.log(a, b, c, d, e); // OUTPUT: 1 2 3 4 5
@@ -23,6 +29,7 @@ function App() {
 
   //   return [state, setState];
   // };
+
 
   return (
     <div className="App">
