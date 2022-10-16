@@ -5,18 +5,14 @@ import Manipulator from "./components/Manipulator/Manipulator";
 function App() {
   const propToPassDown = 5;
 
+  // stan odpowiadajacy za informowanie aplikacji o tym czy fetch zakonczyl dzialanie i dane sa gotowe do wyswietlenia
+
   return (
     <div className="App">
-      <Display numberToDisplay={propToPassDown}/>
+      <Display numberToDisplay={propToPassDown} />
       <Manipulator />
     </div>
   );
 }
-
-// {
-//   numberToDisplay: propToPassDown,
-// }
-
-// <Display x={y}/> -> Display({x: y})
 
 export default App;
