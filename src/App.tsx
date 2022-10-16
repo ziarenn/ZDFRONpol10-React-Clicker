@@ -1,9 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import Display from "./components/Display/Display";
+import Manipulator from "./components/Manipulator/Manipulator";
 
 function App() {
-  return <div className="App"></div>;
+  const propToPassDown = 5;
+
+  return (
+    <div className="App">
+      <Display numberToDisplay={propToPassDown}/>
+      <Manipulator />
+    </div>
+  );
 }
+
+// {
+//   numberToDisplay: propToPassDown,
+// }
+
+// <Display x={y}/> -> Display({x: y})
 
 export default App;
